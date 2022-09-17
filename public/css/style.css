@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAFAFA;
+  margin: 54px 0 0;
+  font-family: 'Roboto', sans-serif;
+  color: #262626;
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 54px;
+  border-bottom: 1px solid #DBDBDB;
+  font-size: 22px;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+header ion-icon,
+header img {
+  cursor: pointer;
+}
+
+header .container {
+  width: 100%;
+  max-width: 935px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header .container>* {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .logo img {
+  position: relative;
+  top: 3px;
+}
+
+header .logo .separador {
+  width: 1px;
+  height: 22px;
+  background-color: #DBDBDB;
+  margin: 0 10px;
+}
+
+header .search input {
+  width: 215px;
+  height: 28px;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+  border: 1px solid #DBDBDB;
+  color: #979797;
+  text-align: center;
+}
+
+header .icons ion-icon {
+  margin: 0 5px;
+}
+
+header .icons-mobile {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 935px;
+  margin: 0 auto;
+  margin-top: 88px;
+}
+
+.feed {
+  width: 100%;
+  max-width: 614px;
+}
+
+.sidebar {
+  width: 293px;
+}
+
+.stories {
+  display: flex;
+  align-items: center;
+  height: 118px;
+  border-radius: 3px;
+  border: 1px solid #DBDBDB;
+  padding: 0 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.story {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 0;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.story .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66px;
+  width: 66px;
+  background-image: url('../images/stories_background\ 6.png');
+
+}
+
+.story .image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.story .user {
+  width: 66px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  height: 14px;
+}
+
+.stories .pointer {
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  height: 32px;
+  width: 32px;
+  color: #FFF;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.post {
+  border-radius: 3px;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.post .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.post .top .user,
+.post .top .actions {
+  display: flex;
+  align-items: center;
+}
+
+.post .top img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.post .user,
+.post .top img,
+.post .bottom img,
+.post ion-icon,
+.post strong,
+.user ion-icon,
+.user>img,
+.content>img {
+  cursor: pointer;
+}
+
+.post .content img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.post .bottom .actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 16px;
+  font-size: 24px;
+}
+
+.post .bottom .actions div:first-child ion-icon {
+  margin-right: 6px;
+}
+
+.post .bottom .likes {
+  display: flex;
+  align-items: center;
+  padding: 0 16px 13px;
+  font-weight: 300;
+}
+
+.post .bottom .likes img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.post:last-child {
+  margin-bottom: 18px;
+}
+
+.sidebar {
+  padding-top: 24px;
+  position: sticky;
+  top: 88px;
+}
+
+.sidebar>.user {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar>.user img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.sidebar>.user .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+  font-weight: 300;
+}
+
+.sidebar .user .text strong {
+  font-weight: 500;
+  color: #262626;
+}
+
+.sidebar .sugestions .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 14px;
+}
+
+.sidebar .sugestions .sugestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 31px;
+  margin-bottom: 16px;
+}
+
+.sidebar .sugestions .sugestion .user {
+  display: flex;
+}
+
+.sidebar .sugestions img {
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar .sugestions .follow {
+  color: #139EF2;
+  font-weight: 600;
+}
+
+.sidebar .sugestions .sugestion .user .text {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .sugestions .sugestion .user .text :last-child {
+  color: #8E8E8E;
+  font-weight: 400;
+}
+
+.links,
+.copyright {
+  font-size: 11px;
+  color: #C7C7C7;
+}
+
+.links {
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.copyright {
+  margin-top: 18px;
+}
+
+header .bottom-mobile {
+  display: none;
+}
+
+header .bottom-mobile ion-icon {
+  cursor: pointer;
+}
+
+.logo-mobile,
+.instagram-mobile {
+  display: none !important;
+}
+
+@media (max-width: 935px) {
+  .sidebar {
+    display: none;
+  }
+
+  header .container {
+    padding: 0 20px;
+  }
+
+  main {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 614px) {
+  main {
+    margin-top: 0;
+  }
+
+  .post {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+
+  .post:last-child {
+    margin-bottom: 72px;
+  }
+
+  .stories {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .post:first-child {
+    margin-top: 0;
+  }
+
+  header .search {
+    display: none;
+  }
+
+  header .icons {
+    display: none;
+  }
+
+  header .icons-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .bottom-mobile {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    background-color: #FFF;
+    border-top: 1px solid #DBDBDB;
+    height: 54px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  header .logo {
+    display: none;
+  }
+
+  .logo-mobile,
+  .instagram-mobile {
+    display: flex !important;
+  }
+
+  .instagram-mobile {
+    position: relative;
+    top: 4px;
+  }
+}
+
+ion-icon {
+  visibility: visible;
+}
+
+.user ion-icon {
+  margin-left: 5px;
+}
