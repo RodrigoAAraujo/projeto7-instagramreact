@@ -74,7 +74,7 @@ header .icons ion-icon {
   margin: 0 5px;
 }
 
-header .icons-mobile {
+header .mobile {
   display: none;
 }
 
@@ -204,6 +204,24 @@ main {
   padding: 13px 16px;
   font-size: 24px;
 }
+.post .bottom .actions div{
+  display: flex;
+} 
+
+/*Posts Interactions*/
+
+.bottom .actions .like :first-child, .post .bottom .actions .save :first-child{
+  display: none;
+}
+.liked .bottom .actions .like :first-child, .saved .bottom .actions .save :first-child{
+  display: block;
+}
+.liked .bottom .actions .like :first-child{
+  color: red;
+}
+.liked .bottom .actions .like :last-child, .saved .bottom .actions .save :last-child{
+  display: none;
+}
 
 .post .bottom .actions div:first-child ion-icon {
   margin-right: 6px;
@@ -312,10 +330,6 @@ main {
   margin-top: 18px;
 }
 
-header .bottom-mobile {
-  display: none;
-}
-
 header .bottom-mobile ion-icon {
   cursor: pointer;
 }
@@ -374,11 +388,12 @@ header .bottom-mobile ion-icon {
     display: none;
   }
 
-  header .icons-mobile {
+  header .mobile, header .icons-mobile{
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
+
 
   header .bottom-mobile {
     display: flex;

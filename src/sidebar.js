@@ -1,15 +1,12 @@
 import User from "./user"
 import Sugestions from "./sugestions"
-import React, { useState } from "react"
+import React from "react"
 
 
 export default function Sidebar() {
-    const InitialUserInfo = { name: "InitialName", username: "InitialUserName", image: "/images/users/catanacomics 1.png" }
-    const [UserInfo, setUser] = useState(InitialUserInfo)
-
     return (
         <div className="sidebar">
-            <User name={UserInfo.name} username={UserInfo.username} image={UserInfo.image} />
+            <User/>
             <Sugestions />
 
             <p className="copyright">
